@@ -68,6 +68,18 @@ jobs:
         ./scripts/feeds update -a
         ./scripts/feeds install -a
         ./scripts/feeds install -a
+
+    - name: Import external feeds
+      working-directory: ./openwrt
+      run: |
+    #    git clone https://github.com/Lienol/openwrt-package package/lienol
+    #    git clone "your_github_link" package/"your_folder_name"      
+    #    git clone "your_github_link" package/"your_folder_name"  
+        git clone https://github.com/fw876/helloworld package/openwrt-packages  
+        git clone https://github.com/rosywrt/luci-theme-rosy.git package/openwrt-packages
+        git clone https://github.com/sypopo/luci-theme-argon-mc.git package/openwrt-packages
+        git clone https://github.com/Mrbai98/luci-theme-atmaterial.git package/openwrt-packages
+
     - name: Configuration Customization - Build_Newifi_D2
       env:
         CONFIG_FILE: 'Newifi_D2.config'
