@@ -19,7 +19,7 @@ on:
   #  - cron: 0 8 * * 5
   
   #watch:
-    #types: [started]
+  #  types: [started]
 
 jobs:
   build:
@@ -73,17 +73,14 @@ jobs:
         ./scripts/feeds install -a
         ./scripts/feeds install -a
 
-    - name: Import external feeds
-      working-directory: ./openwrt
-      run: |
-    #    git clone https://github.com/Lienol/openwrt-package package/lienol
-    #    git clone "your_github_link" package/"your_folder_name"      
-    #    git clone "your_github_link" package/"your_folder_name"  
-        git clone https://github.com/fw876/helloworld package/openwrt-packages  
-        git clone https://github.com/rosywrt/luci-theme-rosy.git package/openwrt-packages
-        git clone https://github.com/sypopo/luci-theme-argon-mc.git package/openwrt-packages
-        git clone https://github.com/Mrbai98/luci-theme-atmaterial.git package/openwrt-packages
-        
+    #- name: Import external feeds
+    #  working-directory: ./openwrt
+    #  run: |
+    #    git clone https://github.com/fw876/helloworld package/openwrt-packages
+    #    git clone https://github.com/rosywrt/luci-theme-rosy.git package/openwrt-packages
+    #    git clone https://github.com/sypopo/luci-theme-argon-mc.git package/openwrt-packages
+    #    git clone https://github.com/Mrbai98/luci-theme-atmaterial.git package/openwrt-packages
+
     - name: Configuration Customization - Build_x86_64
       env:
         CONFIG_FILE: 'x86_64.config'
