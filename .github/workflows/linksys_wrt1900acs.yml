@@ -98,5 +98,5 @@ jobs:
     - name : Upload artifact
       uses: actions/upload-artifact@master
       with:
-        name: OpenWrt
+        name: OpenWrt_linksys_wrt1900acs
         path: openwrt/bin
