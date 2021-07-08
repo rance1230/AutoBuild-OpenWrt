@@ -105,5 +105,5 @@ jobs:
     - name : Upload artifact
       uses: actions/upload-artifact@master
       with:
-        name: OpenWrt
+        name: OpenWrt_WNDR4300V1
         path: openwrt/bin
