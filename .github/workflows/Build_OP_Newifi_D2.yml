@@ -64,6 +64,16 @@ jobs:
         git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
         cd openwrt
         sed -i '5s/#//' feeds.conf.default
+        echo "src-git ssrp https://github.com/fw876/helloworld.git" >> ./feeds.conf.default
+        echo "src-git argon https://github.com/jerrykuku/luci-theme-argon.git" >> ./feeds.conf.default
+        echo "src-git atmaterial https://github.com/openwrt-develop/luci-theme-atmaterial.git" >> ./feeds.conf.default
+        echo "src-git rosy https://github.com/rosywrt/luci-theme-rosy.git" >> ./feeds.conf.default
+        echo "src-git tano https://github.com/tano-systems/luci-theme-tano.git" >> ./feeds.conf.default
+        echo "src-git vssr https://github.com/jerrykuku/luci-app-vssr.git" >> ./feeds.conf.default
+        echo "src-git ttnode https://github.com/jerrykuku/luci-app-ttnode.git" >> ./feeds.conf.default
+        echo "src-git jddailybonus https://github.com/jerrykuku/luci-app-jd-dailybonus.git" >> ./feeds.conf.default
+        echo "src-git eqos https://github.com/garypang13/luci-app-eqos.git" >> ./feeds.conf.default
+        echo "src-git poweroff https://github.com/esirplayground/luci-app-poweroff.git" >> ./feeds.conf.default
 
     - name: Update & Install feeds
       working-directory: ./openwrt
