@@ -18,8 +18,8 @@ on:
   #schedule:
   #  - cron: 0 8 * * 5
   
-  watch:
-    types: [started]
+  #watch:
+    #types: [started]
 
 jobs:
   build:
@@ -105,5 +105,5 @@ jobs:
     - name : Upload artifact
       uses: actions/upload-artifact@master
       with:
-        name: OpenWrt_X_64
+        name: OpenWrt_X86_64
         path: openwrt/bin
