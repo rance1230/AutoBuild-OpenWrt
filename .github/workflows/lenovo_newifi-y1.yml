@@ -102,5 +102,5 @@ jobs:
     - name : Upload artifact
       uses: actions/upload-artifact@master
       with:
-        name: OpenWrt_lenovo_newifi-y1
+        name: OpenWrt_lenovo_newifi_y1
         path: openwrt/bin
